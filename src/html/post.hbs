@@ -5,8 +5,9 @@
             <h1 class="article-title">
                 {{title}}
             </h1>
-            <div class="article-date">
-                {{date format='MMMM DD, YYYY'}}
+            <div class="article-date article-tags">
+                {{date format='DD MMMM YYYY'}}
+                <span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span>
             </div>
             <div class="ghost-authed">
                 <div id="ghost-edit-page" class="edit-button link-logo"></div>
@@ -30,3 +31,4 @@
 </article>
 {{/post}}
 <!--{{!< default}}-->
+

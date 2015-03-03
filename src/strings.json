@@ -4,6 +4,7 @@
     "enableDisques": true,
     "disqusShortname": "silvenga-blog-ghost",
 
+    "rss-link": true,
     "twitter-link": "https://twitter.com/Silvenga",
     "gPlus-link": "https://plus.google.com/+MarkLopez-Silvenga",
     "linkedIn-link": "https://www.linkedin.com/in/marklopezlink/",

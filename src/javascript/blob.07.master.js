@@ -147,7 +147,7 @@ jQuery(function ($) {
 
     function isExternal(url) {
 
-        if (url.indexOf("mailto:") === 0)
+        if (url.indexOf("mailto:") === 0 || url === "/rss")
             return true;
 
         var match = url.match(/^([^:\/?#]+:)?(?:\/\/([^\/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?/);

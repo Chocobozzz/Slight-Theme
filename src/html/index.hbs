@@ -2,21 +2,23 @@
     <div class=" main-container">
         <div class="index-container flow">
             {{#foreach posts}}
-            <a href="{{{url}}}">
                 <section class="hover-parrent sliders">
                     <div class="post parent-table index-element">
-                        <h4 class="left-cell">
-                            {{title}}
+                        <h4 class="left-cell index-post">
+                            <a class="post-url" href="{{{url}}}">{{title}}</a>
+                            <span class="taglist">{{tags separator=" " prefix=" &middot; "}}</span>
                         </h4>
-                        <h4 class="right-cell righted index-date">
-                            {{date format='MMM D, YYYY'}}
+                        <h4 class="right-cell righted index-date index-author">
+                            {{date format='D MMM YYYY'}}
+                            {{#if author.image}}
+                                <span class="index-author-image" title="{{{author.name}}}"><img alt="{{{author.name}}}" src="{{{author.image}}}" /></span>
+                            {{/if}}
                         </h4>
                     </div>
                 </section>
-            </a>
             {{/foreach}}
         </div>
     </div>
 </div>
 {{!pagination}}
-<!--{{!< default}}--> 
+<!--{{!< default}}-->
