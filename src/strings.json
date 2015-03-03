@@ -1,15 +1,15 @@
 {
-    "footer": "Copyright &copy; Mark Lopez 2014. <a href='/humble-disclaimer/'>My Humble Disclaimer and Privacy Policy</a>.<br>Written under the <a href='https://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Attribution-ShareAlike 4.0 International License</a>.",
+    "footer": "Powered by <a href='https://github.com/tryghost/Ghost'>Ghost</a> with the following <a href='https://github.com/Chocobozzz/Slight-Theme'>theme</a>.<br />Written under the <a href='https://creativecommons.org/licenses/by-sa/4.0/'>Creative Commons Attribution-ShareAlike 4.0 International License</a>.",
 
-    "enableDisques": true,
+    "enableDisques": false,
     "disqusShortname": "silvenga-blog-ghost",
 
     "rss-link": true,
-    "twitter-link": "https://twitter.com/Silvenga",
-    "gPlus-link": "https://plus.google.com/+MarkLopez-Silvenga",
-    "linkedIn-link": "https://www.linkedin.com/in/marklopezlink/",
-    "facebook-link": "https://www.facebook.com/sea.marklopez",
-    "gitHub-link": "https://github.com/Silvenga",
+    "twitter-link": "https://twitter.com/Chocobozzz",
+    "gPlus-link": "",
+    "linkedIn-link": "",
+    "facebook-link": "",
+    "gitHub-link": "https://github.com/Chocobozzz",
 
     "showLove": true
 }
