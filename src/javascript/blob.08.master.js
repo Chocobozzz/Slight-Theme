@@ -5,6 +5,12 @@ var disqus_shortname = "@@disqusShortname";
 
 //////////////////////////////////////////////////
 
+// Syntax highlight
+hljs.configure({
+    tabReplace: '    ',
+});
+hljs.initHighlighting();
+
 jQuery(function ($) {
 
     var history = window.History;
@@ -109,6 +115,10 @@ jQuery(function ($) {
 
                 // We are removing title info, get it before its gone.
                 document.title = $tempDiv.find("#title").text();
+                // Syntax highlight
+                $tempDiv.find('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
             }
 
             Pace.stop();
