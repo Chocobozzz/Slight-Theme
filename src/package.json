@@ -4,7 +4,7 @@
     "description": "A minimal theme for Ghost.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Silvenga/Slight-Theme.git"
+        "url": "https://github.com/Chocobozzz/Slight-Theme.git"
     },
     "devDependencies": {
         "grunt": "latest",
