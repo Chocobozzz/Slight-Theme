@@ -140,7 +140,8 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: ["images/*"],
-                        dest: "<%= base %>/assets/"
+                        dest: "<%= base %>/assets/",
+                        expand: true
                     },
                     {
                         expand: true,
