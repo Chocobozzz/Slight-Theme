@@ -103,7 +103,8 @@ body {
 }
 
 .nav-bar {
-    z-index: 10;
+    /* For fluidbox */
+    z-index: 1000;
     margin: auto;
 
     @media @default {
@@ -262,7 +263,6 @@ body {
         padding-top: 1em;
         font-size: 1.1em;
         padding-bottom: 1em;
-        //border-bottom: 1px solid #eee;
         @media @tablet {
             text-align: center;
         }
@@ -422,16 +422,11 @@ body {
         img {
             box-shadow: 0 0 5px 1px fade(black, 20%);
             max-width: 98%;
-            padding: 5px;
-            width: 50%;
             margin: 1em;
-            float: right;
-            background: white;
-            z-index: 100;
+            z-index: 0;
 
             @media @small-desktop {
-                width: 100%;
-                float: none;
+                max-width: 98%;
                 margin: 1em auto;
                 margin-left: 1%;
             }
@@ -440,12 +435,10 @@ body {
                 max-width: 98%;
                 width: 50%;
                 margin: 1em;
-                float: right;
             }
 
             @media @phone {
-                width: 100%;
-                float: none;
+                max-width: 98%;
                 margin: 1em auto;
                 margin-left: 1%;
             }

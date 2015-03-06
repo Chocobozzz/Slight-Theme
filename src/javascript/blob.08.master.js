@@ -33,16 +33,23 @@ jQuery(function ($) {
 
             var $image = $(this);
 
-            var $wrapper = $("<a/>", {
-                "href": $image.attr("src"),
-                "class": "light-box"
-            });
+            var $parent = $image.parent("a");
 
-            $image.wrap($wrapper);
+            if ($parent.length === 0) {
+                var $wrapper = $("<a/>", {
+                    "href": $image.attr("src"),
+                    "class": "light-box"
+                });
 
+                $image.wrap($wrapper);
+                $wrapper.fluidbox();
+            }
+            else {
+                $parent.addClass("light-box");
+                $parent.fluidbox();
+            }
         });
 
-        $(".light-box").fluidbox();
 
         $(window).resize(); // fixes small images for some reason TODO
     }
