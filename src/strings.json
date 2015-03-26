@@ -3,6 +3,7 @@
 
     "enableDisques": false,
     "disqusShortname": "silvenga-blog-ghost",
+    "isso-link": "localhost:1234",
 
     "rss-link": true,
     "diaspora-link": "https://diaspora-fr.org/u/squall",

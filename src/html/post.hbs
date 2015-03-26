@@ -26,6 +26,10 @@
                 var disqus_identifier = '{{post.id}}';
             </script>
             {{/if}}
+            {{#if "@@isso-link"}}
+            <script data-isso="//@@isso-link/" src="//@@isso-link/js/embed.min.js"></script>
+            <section id="isso-thread"></section>
+            {{/if}}
         </div>
     </div>
 </article>

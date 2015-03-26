@@ -494,6 +494,22 @@ body {
     }
 }
 
+#isso-thread {
+  border-top: 1px #eee solid;
+
+  input {
+    transition: all ease-out 200ms;
+  }
+
+  a {
+    transition: color ease-out 200ms;
+
+    &:hover::after,
+    &:focus::after {
+      opacity: 0;
+    }
+  }
+}
 
 .footer {
     padding: 1em 0 2.5em @sidebar-width;
