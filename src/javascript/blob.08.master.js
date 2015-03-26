@@ -88,7 +88,8 @@ jQuery(function ($) {
     function attachIsso() {
       if(isso_link && $('#isso-thread') !== 0) {
         var dsq = document.createElement("script");
-        dsq.dataset.isso = "//"+ isso_link;
+        dsq.setAttribute('data-isso', '//' + isso_link);
+        dsq.setAttribute('data-isso-vote', "false");
         dsq.async = true;
         dsq.src = "//" + isso_link + "/js/embed.min.js";
         document.getElementsByTagName("head")[0].appendChild(dsq);
