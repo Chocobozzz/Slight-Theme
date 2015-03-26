@@ -2,6 +2,7 @@
 
 var enable_disques = ("@@enableDisques" === "true");
 var disqus_shortname = "@@disqusShortname";
+var isso_link = "@@isso-link";
 
 //////////////////////////////////////////////////
 
@@ -82,6 +83,16 @@ jQuery(function ($) {
                 }
             }
         }
+    }
+
+    function attachIsso() {
+      if(isso_link && $('#isso-thread') !== 0) {
+        var dsq = document.createElement("script");
+        dsq.dataset.isso = "//"+ isso_link;
+        dsq.async = true;
+        dsq.src = "//" + isso_link + "/js/embed.min.js";
+        document.getElementsByTagName("head")[0].appendChild(dsq);
+      }
     }
 
     function onStateChanged() {
@@ -246,6 +257,10 @@ jQuery(function ($) {
 
         attempt(function () {
             attachDisqus();
+        });
+
+        attempt(function () {
+            attachIsso();
         });
 
         attempt(function () {
