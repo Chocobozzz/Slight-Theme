@@ -26,8 +26,9 @@
                 var disqus_identifier = '{{post.id}}';
             </script>
             {{/if}}
-            <script data-isso="//comments.angristan.fr/" src="//comments.angristan.fr/js/embed.min.js"></script>
+            {{#if "@@isso-link"}}
             <section id="isso-thread"></section>
+            {{/if}}
         </div>
     </div>
 </article>
