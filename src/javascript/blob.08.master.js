@@ -17,6 +17,17 @@ jQuery(function ($) {
     var history = window.History;
     var $ajaxContainer = $("#ajax-container");
 
+    $(document).keydown(function(event){
+        if(event.which=="17")
+            ctrlIsPressed = true;
+    });
+
+    $(document).keyup(function(){
+        ctrlIsPressed = false;
+    });
+
+    var ctrlIsPressed = false;
+        
     function attempt(func) {
         setTimeout(function () {
             try {
@@ -195,7 +206,7 @@ jQuery(function ($) {
         var $this = $(this);
 
         // Figure out if link can ajax
-        if ($this.hasClass("light-box") || isExternal($this.attr("href")) || $this.hasClass("disable-ajax"))
+        if (ctrlIsPressed === true || $this.hasClass("light-box") || isExternal($this.attr("href")) || $this.hasClass("disable-ajax"))
             return true;
 
         // The link is ajaxible, disable normal action
