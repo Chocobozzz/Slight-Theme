@@ -7,6 +7,12 @@
     display: none !important;
   }
 
+  .index-container {
+    .taglist {
+      color: white; // to hide the .
+    }
+  }
+
   .article {
     padding: 0 !important;
 
@@ -47,6 +53,17 @@
 
       .article-date.article-tags {
         max-width: @text-width-small-screen !important;
+      }
+      
+      .article-title {
+        font-size: 1.5em;
+      }
+
+      .article-tags {
+        .taglist {
+          display: block;
+          color: white; // hide the .
+        }
       }
 
     }
@@ -452,7 +469,7 @@ body {
             margin-bottom: 0;
 
             @media @phone {
-                font-size: 2em;
+                font-size: 1.5em;
             }
         }
     }
@@ -476,19 +493,15 @@ body {
             z-index: 0;
 
             @media @small-desktop {
-                max-width: 98%;
                 margin: 1em auto;
                 margin-left: 1%;
             }
 
             @media @tablet {
-                max-width: 98%;
-                width: 50%;
-                margin: 1em;
+              width: 98%;
             }
 
             @media @phone {
-                max-width: 98%;
                 margin: 1em auto;
                 margin-left: 1%;
             }
