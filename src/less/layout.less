@@ -1,26 +1,65 @@
 @header-color: #607d8b;
 @text-width: 90%;
-
-@media @default {
-}
-
-
-@media @tablet {
-}
-
-@media @phone {
-}
+@text-width-small-screen: 100%;
 
 @media screen and (max-width: 1100px) {
-    .article {
-      padding: 0 !important;
-    }
-    
-    header {
-        display: none !important;
+  header {
+    display: none !important;
+  }
+
+  .article {
+    padding: 0 !important;
+
+    h1 {
+      max-width: @text-width-small-screen !important;
     }
 
-    @text-width: 100%;
+    h2 {
+      max-width: @text-width-small-screen !important;
+    }
+
+    h3 {
+      max-width: @text-width-small-screen !important;
+    }
+
+    h4 {
+      max-width: @text-width-small-screen !important;
+    }
+
+    h5 {
+      max-width: @text-width-small-screen !important;
+    }
+
+    h6 {
+      max-width: @text-width-small-screen !important;
+    }
+
+    hr {
+      max-width: @text-width-small-screen !important;
+      margin-left: 0px;
+    }
+
+    p {
+      max-width: @text-width-small-screen !important;
+    }
+
+    .article-header {
+
+      .article-date.article-tags {
+        max-width: @text-width-small-screen !important;
+      }
+
+    }
+
+    .article-container {
+
+      .article-comments {
+        max-width: @text-width-small-screen !important;
+      }
+
+    }
+
+  }
 }
 
 ::selection {
