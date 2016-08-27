@@ -66,7 +66,7 @@ jQuery(function ($) {
     }
 
     function attachIsso() {
-      if(isso_link && $('#isso-thread') !== 0) {
+      if(isso_link && $('#isso-thread').size() !== 0) {
         var dsq = document.createElement("script");
         dsq.setAttribute('data-isso', '//' + isso_link);
         dsq.setAttribute('data-isso-vote', "false");
