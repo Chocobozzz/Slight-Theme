@@ -1,7 +1,5 @@
 ﻿//////////////////////////////////////////////////
 
-var enable_disques = ("@@enableDisques" === "true");
-var disqus_shortname = "@@disqusShortname";
 var isso_link = "@@isso-link";
 
 //////////////////////////////////////////////////
@@ -18,8 +16,9 @@ jQuery(function ($) {
     var $ajaxContainer = $("#ajax-container");
 
     $(document).keydown(function(event){
-        if(event.which=="17")
-            ctrlIsPressed = true;
+        if (event.which == "17") {
+          ctrlIsPressed = true;
+        }
     });
 
     $(document).keyup(function(){
@@ -27,7 +26,7 @@ jQuery(function ($) {
     });
 
     var ctrlIsPressed = false;
-        
+
     function attempt(func) {
         setTimeout(function () {
             try {
@@ -64,36 +63,6 @@ jQuery(function ($) {
 
 
         $(window).resize(); // fixes small images for some reason TODO
-    }
-
-    function attachDisqus() {
-
-        if (enable_disques) {
-            // Have we already loaded Disqus?
-
-            if ($("#disqus_thread").length > 0) {
-
-                if ($("#disqus_script").length > 0) {
-
-                    // if id is seen, then run the comments reset script
-                    window.DISQUS.reset({
-                        reload: true,
-                        config: function () {
-                            this.page.identifier = $("#page-id").text();
-                            this.page.url = history.getState().url;
-                        }
-                    });
-
-                } else {
-
-                    var dsq = document.createElement("script");
-                    dsq.id = "disqus_script";
-                    dsq.async = true;
-                    dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-                    document.getElementsByTagName("head")[0].appendChild(dsq);
-                }
-            }
-        }
     }
 
     function attachIsso() {
@@ -248,27 +217,9 @@ jQuery(function ($) {
     function onLoaded() {
 
         attempt(function () {
-            if (Ghost.isAuthenticated()) {
-                $(".ghost-authed").show();
-                $("#ghost-edit-page").on("click", function () {
-                    Ghost.edit($("#page-id").text());
-                });
-            }
-        });
-
-        attempt(function () {
             setTimeout(function () {
                 $(".flow").removeClass("flow");
             }, (100 * 10));
-        });
-
-        attempt(function () {
-            $(".body p img").parent().addClass("image-p");
-            $(".body p code[data-gist-id]").parent().addClass("image-p");
-        });
-
-        attempt(function () {
-            attachDisqus();
         });
 
         attempt(function () {
@@ -277,10 +228,6 @@ jQuery(function ($) {
 
         attempt(function () {
             lightBox();
-        });
-
-        attempt(function () {
-            $("[data-gist-id]").gist();
         });
     }
 
