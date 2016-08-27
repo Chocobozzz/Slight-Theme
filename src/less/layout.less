@@ -54,7 +54,7 @@
       .article-date.article-tags {
         max-width: @text-width-small-screen !important;
       }
-      
+
       .article-title {
         font-size: 1.5em;
       }
@@ -91,6 +91,9 @@ body {
     // height: 100%;
 }
 
+a:focus, button:focus {
+  outline:0;
+}
 
 @sidebar-width: 25%;
 
@@ -749,40 +752,3 @@ blockquote {
     background-image: url('/assets/images/404.png');
     background-repeat: no-repeat;
 }
-
-/*html {
-
-
-    @media @default {
-        overflow-y: hidden;
-    }
-
-
-    @media @tablet {
-        overflow-y: auto;
-    }
-
-    @media @phone {
-        overflow-y: auto;
-    }
-}
-
-
-main {
-
-    @media @default {
-        overflow-y: scroll;
-        height: 100vh;
-    }
-
-
-    @media @tablet {
-        overflow-y: visible;
-        height: auto;
-    }
-
-    @media @phone {
-        overflow-y: visible;
-        height: auto;
-    }
-}*/
