@@ -129,7 +129,6 @@ jQuery(function ($) {
         }, 200);
 
         $.when(animation, ajax).then(function () {
-
             // Unhide
             $("#main-footer").fadeIn(100);
             $ajaxContainer.html($tempDiv.html());
@@ -140,17 +139,6 @@ jQuery(function ($) {
                 title: $("#title").text(),
                 url: state.url
             });
-
-            // Move to top
-            var top = 0;
-            try {
-                top = $(".nav-bar").offset().top;
-            } catch (err) {
-                // Error
-            }
-            $("body").animate({
-                scrollTop: top //- 120
-            }, 400);
         });
     }
 
