@@ -126,7 +126,7 @@ jQuery(function ($) {
 
         setTimeout(function () {
             animation.resolve();
-        }, 400);
+        }, 200);
 
         $.when(animation, ajax).then(function () {
 
