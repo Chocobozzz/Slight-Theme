@@ -1,8 +1,11 @@
 {
-    "name": "Slight",
+    "name": "Slight Chocobozzz",
     "version": "2.1.1",
-    "author": "Mark Lopez",
-    "homepage": "https://silvenga.com",
-    "email": "m@silvenga.com",
-    "license": "MIT"
+    "author": "Mark Lopez & Chocobozzz",
+    "homepage": "https://blog.cpy.re",
+    "email": "florian@cpy.re",
+    "license": "MIT",
+    "config": {
+      "posts_per_page": 25
+    }
 }
